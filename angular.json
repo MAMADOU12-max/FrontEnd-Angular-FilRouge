@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "filrougeFrontendAngularself"
+    }
+  },
+  "defaultProject": "filrougeFrontendAngularself",
+  "cli": {
+    "analytics": "803db441-b711-4582-a70d-63b84be352ea"
+  }
 }

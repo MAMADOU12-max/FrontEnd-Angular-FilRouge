@@ -1,0 +1,79 @@
+<body>
+    <div class="container">
+        <!--navbar-->
+        <mat-toobar class="app-header">
+            <mat-toolbar color="primary" class="expanded-toolbar">
+              <span>Header</span>
+              <!--          <span>-->
+              <!--            <button mat-button routerLink="/">Menu</button>-->
+              <!--            <button mat-button routerLink="/"><mat-icon>home</mat-icon></button>-->
+              <!--          </span>-->
+              <!--          <div fxLayout="row" fxShow="false" fxShow.gt-sm>-->
+              <!--          </div>-->
+              <!--          <button mat-button [mat-menu-trigger-for]="" fxHide="false" fxHide.gt-sm>-->
+              <!--            <mat-icon>menu</mat-icon>-->
+              <!--          </button>-->
+            </mat-toolbar>
+        </mat-toobar>
+        <!-- Fin navbar -->
+
+        <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+
+            <mat-card class="box">
+                <!--avatar-->
+                <mat-card-header>
+                          <mat-card-title class="titleform">Log in</mat-card-title>
+                  <mat-card class="example-card">
+                    <mat-card-header>
+                      <div mat-card-avatar class="example-header-image"></div>
+                    </mat-card-header>
+                  </mat-card>
+                </mat-card-header>
+
+                <form class="example-form" [formGroup]="formSignup" (ngSubmit)="onFormSubmit()">
+                  <mat-card-content>
+
+                      <!-- Username -->
+                    <div class="example-container" id="usernameLine">
+                        <mat-form-field appearance="fill">
+                          <label >Username</label>
+                          <input matInput class="inputclass" [(ngModel)]="username" placeholder="pat@example.com" formControlName="username" required>
+                        </mat-form-field>
+                        <div class="text-danger" *ngIf="submitted && f.username.errors">
+                            <div *ngIf="f.username.errors.required"> Username is required</div>
+                        </div>
+                    </div>
+<!--                    <span class="material-icons icon-user" mat-icon-button matSuffix>-->
+<!--                              account_circle-->
+<!--                          </span>-->
+                    <!-- Fin Username -->
+
+                    <br>
+
+                   <!-- Password -->
+                    <div class="example-container">
+                        <mat-form-field appearance="fill">
+                            <label >Password</label>
+                            <input matInput class="inputclass" [(ngModel)]="password" placeholder="password" formControlName="password" required>
+                            <button class="oeil" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                              <br>
+                              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </button>
+                        </mat-form-field>
+                        <div class="text-danger" *ngIf="submitted && f.password.errors">
+                            <div class="text-wrap" *ngIf="f.password.errors.required"> Password must be provided</div>
+    <!--                        <div class="text-wrap" *ngIf="f.password.errors.invalid"> Password is invalid</div>-->
+                        </div>
+                    </div>
+                    <br>
+                  <!-- Fin password -->
+
+                  </mat-card-content>
+                  <button  class="btn-outline-warning justify-content-center" >Log in</button>
+                </form>
+            </mat-card>
+
+        </div>
+    </div>
+</body>
+

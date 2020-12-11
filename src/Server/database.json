@@ -1,0 +1,5 @@
+{"users":[
+  {"id":1,"lastname":"Kayley","firstname":"Stroman","password":"uTswmfB6Uh_U","avatar":"https://source.unsplash.com/1600x900/?product","email":"Mellie90@yahoo.com","username":"Deon15","role":"ROLE_FORMATEUR"},
+  {"id":2,"lastname":"Adelbert","firstname":"Bergstrom","password":"TVy9CS5Ya8AU","avatar":"https://source.unsplash.com/1600x900/?product","email":"Willard_MacGyver@gmail.com","username":"Callie_Paucek70","role":"ROLE_CM"},
+  {"id":3,"lastname":"Jordyn","firstname":"Ryan","password":"F3qaiZITnVrv","avatar":"https://source.unsplash.com/1600x900/?product","email":"Estrella_Keeling32@yahoo.com","username":"Jayme_Glover","role":"ROLE_APPRENANT"},
+  {"id":4,"lastname":"Imogene","firstname":"Reichel","password":"slm40bPMUGMW","avatar":"https://source.unsplash.com/1600x900/?product","email":"Neva32@gmail.com","username":"Rosemarie_Johns","role":"ROLE_ADMIN"}]}

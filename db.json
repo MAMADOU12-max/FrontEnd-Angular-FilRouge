@@ -1,0 +1,48 @@
+{
+   "users": [
+     {
+       "id": "1" ,
+       "firstname": "Kanty" ,
+       "lastname": "John" ,
+       "email": "modou@gmail.com" ,
+       "password": "pass_1234" ,
+       "username": "down",
+       "profil": "ADMIN"
+     } ,
+     {
+       "id": "2" ,
+       "firstname": "John" ,
+       "lastname": "Doe" ,
+       "email": "modou@gmail.com" ,
+       "password": "pass_1234" ,
+       "username": "down" ,
+       "profil": "APPRENANT"
+     } ,
+     {
+       "id": "3" ,
+       "firstname": "John" ,
+       "lastname": "Doe" ,
+       "email": "modou@gmail.com" ,
+       "password": "pass_1234" ,
+       "username": "down" ,
+       "profil": "FORMATEUR"
+     }
+   ] ,
+    "profil": [
+      {
+        "id": "1" ,
+        "libelle": "ADMIN"
+      } ,
+      {
+        "id": "2" ,
+        "libelle": "FORMATEUR"
+      } ,
+      {
+        "id": "3" ,
+        "libelle": "APPRENANT"
+      } , {
+        "id": "4" ,
+        "libelle": "CM"
+      }
+    ]
+}
