@@ -5,6 +5,7 @@ import {UserModal} from '../modals/UserModal';
 import * as jwt_decode from "jwt-decode";
 import {JwtHelperService} from '@auth0/angular-jwt';
 import {map} from 'rxjs/operators';
+import {Router} from '@angular/router';
 
 
 @Injectable({
@@ -17,7 +18,7 @@ export class UserService {
   //  teams$ = this.http.get('UrlEnv/users');
   helper = new JwtHelperService() ;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private router: Router) {
 
   }
 
@@ -28,8 +29,14 @@ export class UserService {
       }).pipe(
             map((response: any) => {
                 this.tokenDecoded = this.helper.decodeToken(response.token) ;
-                console.log(this.tokenDecoded['roles']) ;
-                // if ()
+
+                if (this.tokenDecoded['roles'] == "ROLE_FORMATEUR") {
+                  this.router.navigate(['formateur']) ;
+                } else if (this.tokenDecoded['roles'] == "ROLE_ADMIN") {
+                  this.router.navigate(['admin']) ;
+                }else if (this.tokenDecoded['roles'] == "ROLE_CM") {
+                  this.router.navigate(['cm']) ;
+                }
             })
      );
   }
